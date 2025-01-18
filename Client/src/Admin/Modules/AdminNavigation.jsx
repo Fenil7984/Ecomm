@@ -6,7 +6,7 @@ import { Menu, MenuItem, Divider } from '@mui/material';
 import { IoShieldHalfSharp } from 'react-icons/io5';
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import Logout from '@mui/icons-material/Logout';
-import logo from '../../assets/logo.png';
+import ecomm from '../../assets/ecomm.png';
 import { Link, useNavigate } from 'react-router-dom';
 import SearchBox from '../components/Search/SerchBox';
 import { GlobelProvider } from '../../context/globelContext';
@@ -59,7 +59,7 @@ export default function AdminNavigation() {
         <div className="row d-flex align-items-center w-100">
           <div className="col-sm-2 part-1">
             <Link className="d-flex align-items-center pl-4 relative bottom-1" style={{ textDecoration: "none" }}>
-              <img src={logo} alt="Logo" />
+              <img src={ecomm} alt="Logo" />
               <span>Ecomm</span>
             </Link>
           </div>

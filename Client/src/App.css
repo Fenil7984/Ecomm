@@ -15,15 +15,17 @@ header{
     background: #fff;
 }
 header img{
-    margin-left: 30px;
+    margin-left: 10px;
     width: 100px;
     height: 70px;
 }
 header span{
+    margin-top: 10px;
     margin-left: -20px;
     font-weight: 800;
+    text-decoration: none;
     font-size: 30px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
     color: rgb(20, 96, 22);
 }
 header button.rounded-circle{
@@ -53,7 +55,7 @@ header button.rounded-circle svg{
     color: #292929;
 } */
 .App-logo {
-    height: 10svmin; /* logo ni height set karo */
+    height: 10min; /* logo ni height set karo */
     pointer-events: none; /* logo par click event disable karo */
     /* animation: App-logo-spin infinite 20s linear;  *//* logo spin effect */
   }
@@ -963,6 +965,7 @@ header button.rounded-circle svg{
       width: 98vw;
       height: 250px;
       z-index: 10;
+      
     }
     .cart-box.cart-box-toggle {
       display: flex;

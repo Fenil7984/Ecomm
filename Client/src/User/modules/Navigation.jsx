@@ -7,11 +7,11 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
+//import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
+//import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+//import AdbIcon from '@mui/icons-material/Adb';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { LogoutFecthApi, UserValidation } from '../redux/User/UserThunk';
@@ -19,9 +19,9 @@ import { toast } from 'react-toastify';
 import { FaRegHeart, FaRegUser, FaShoppingCart } from 'react-icons/fa';
 import { IoCartOutline, IoLogIn, IoShieldHalfSharp } from 'react-icons/io5';
 import { ListItem } from '@mui/material';
-import { MdCategory } from 'react-icons/md';
-import { RiAdminFill } from 'react-icons/ri';
-import PersonAdd from "@mui/icons-material/PersonAdd";
+//import { MdCategory } from 'react-icons/md';
+//import { RiAdminFill } from 'react-icons/ri';
+//import PersonAdd from "@mui/icons-material/PersonAdd";
 import Logout from "@mui/icons-material/Logout";
 //import logo1 from "../../assets/logo1.png";
 
@@ -35,7 +35,7 @@ export default function Navigation() {
 
   const { userData, userCart } = useSelector((state) => state.user)
 
-  console.log(userData?.fname)
+  console.log(userData?.fname) 
 
 
   React.useEffect(() => {
@@ -54,6 +54,15 @@ export default function Navigation() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+  /* const handleOpenCategoriesMenu = (event) => {
+    setAnchorElCategories(event.currentTarget);
+  };
+
+  const handleCloseCategoriesMenu = () => {
+    setAnchorElCategories(null);
+  };
+ */
 
 
   const logoutButton = async () => {
@@ -75,12 +84,12 @@ export default function Navigation() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {<AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />}
+          {/* {<AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />} */}
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+             href="#app-bar-with-responsive-menu" 
             sx={{
               mr: 1,
               display: { xs: 'none', md: 'flex' },
@@ -91,7 +100,8 @@ export default function Navigation() {
               textDecoration: 'none',
             }}
           >
-            <img src="/logo1.png" className='App-logo' alt="logo1" />
+            <img src="/ecomm.png" className='App-logo' alt="logo1" />
+            <span>Ecomm</span>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -111,7 +121,7 @@ export default function Navigation() {
               anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'left',
-              }}
+              }} 
               keepMounted
               transformOrigin={{
                 vertical: 'top',
@@ -135,6 +145,31 @@ export default function Navigation() {
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography sx={{ textAlign: 'center' }}>Categories</Typography>
               </MenuItem>
+              {/* <Menu
+                id="categories-menu"
+                anchorEl={anchorElCategories}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'left',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'left',
+                }}
+                open={Boolean(anchorElCategories)}
+                onClose={handleCloseCategoriesMenu}
+              >
+                <MenuItem onClick={handleCloseCategoriesMenu}>
+                  <Typography>Category 1</Typography>
+                </MenuItem>
+                <MenuItem onClick={handleCloseCategoriesMenu}>
+                  <Typography>Category 2</Typography>
+                </MenuItem>
+                <MenuItem onClick={handleCloseCategoriesMenu}>
+                  <Typography>Category 3</Typography>
+                </MenuItem>
+              </Menu> */}
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography sx={{ textAlign: 'center' }}>About Us</Typography>
               </MenuItem>
@@ -146,7 +181,7 @@ export default function Navigation() {
               </NavLink>
             </Menu>
           </Box>
-          {<AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />}
+          {/* //{<AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />} */}
           <Typography
             variant="h5"
             noWrap
@@ -163,7 +198,7 @@ export default function Navigation() {
               textDecoration: 'none',
             }}
           >
-            <img src="logo1.png" className='App.logo' alt="logo1" />
+            <img src="ecomm.png" className='App.logo' alt="logo1" />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             <NavLink to={"/"} style={{
@@ -190,6 +225,37 @@ export default function Navigation() {
             >
               Categories
             </Button>
+              {/*  <Button
+              onClick={handleOpenCategoriesMenu}
+              sx={{ my: 2, color: 'white', display: 'block' }}
+            >
+              Categories
+            </Button>
+            <Menu
+              id="categories-menu-desktop"
+              anchorEl={anchorElCategories}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              open={Boolean(anchorElCategories)}
+              onClose={handleCloseCategoriesMenu}
+            >
+              <MenuItem onClick={handleCloseCategoriesMenu}>
+                <Typography>Category 1</Typography>
+              </MenuItem>
+              <MenuItem onClick={handleCloseCategoriesMenu}>
+                <Typography>Category 2</Typography>
+              </MenuItem>
+              <MenuItem onClick={handleCloseCategoriesMenu}>
+                <Typography>Category 3</Typography>
+              </MenuItem>
+            </Menu> */}
             <Button
 
               onClick={handleCloseNavMenu}
